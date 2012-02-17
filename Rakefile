@@ -7,7 +7,7 @@ load 'tasks/shoulda.rake'
 
 Rake::TestTask.new do |t|
   t.libs << 'lib' << 'test'
-  t.pattern = 'test/**/*_test.rb'
+  test.test_files = FileList['test/test_*.rb']
   t.verbose = false
 end
 
